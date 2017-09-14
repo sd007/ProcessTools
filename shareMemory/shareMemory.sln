@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shareMemory", "shareMemory\shareMemory.vcxproj", "{8BEB3535-D14A-484F-AC64-A16BA4F704CF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "reader", "reader\reader.vcxproj", "{7A4D8FAE-66D9-4AED-AF20-95EC9DE30902}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BEB3535-D14A-484F-AC64-A16BA4F704CF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8BEB3535-D14A-484F-AC64-A16BA4F704CF}.Debug|Win32.Build.0 = Debug|Win32
+		{8BEB3535-D14A-484F-AC64-A16BA4F704CF}.Release|Win32.ActiveCfg = Release|Win32
+		{8BEB3535-D14A-484F-AC64-A16BA4F704CF}.Release|Win32.Build.0 = Release|Win32
+		{7A4D8FAE-66D9-4AED-AF20-95EC9DE30902}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7A4D8FAE-66D9-4AED-AF20-95EC9DE30902}.Debug|Win32.Build.0 = Debug|Win32
+		{7A4D8FAE-66D9-4AED-AF20-95EC9DE30902}.Release|Win32.ActiveCfg = Release|Win32
+		{7A4D8FAE-66D9-4AED-AF20-95EC9DE30902}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
