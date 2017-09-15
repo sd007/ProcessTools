@@ -9,7 +9,7 @@ int main()
 	int ret = 1;
 	MsgHead buffer;
 	memset(&buffer, 0, sizeof(MsgHead));
-	void *mem = instance->openChannel("sdguet", &ret);
+	void *mem = instance->openChannel("123", &ret);
 	if (mem && ret) //OK
 	{
 		ret = instance->recvBuf(&buffer);

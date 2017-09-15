@@ -14,7 +14,7 @@ int main()
 	memcpy(text, "hello, process!", 128);
 	memcpy(buffer.content, text, sizeof(text));
 	buffer.contentsize = strlen(text)+1;
-	void *mem = instance->createChannel("sdguet", &ret);
+	void *mem = instance->createChannel("123", &ret);
 	if (mem && ret) //OK
 	{
 		ret = instance->sendBuf(&buffer);
