@@ -3,21 +3,16 @@
 Windwos ，Linux 进程间通信封装
 
 
-Windows:
+on Windows:
 
-open with VS2010
-
-
+  open with VS2010,then complie and run.
 
 
-Linux：
-
+on Linux：
+```
 cd /sharedMemory
-
 mkdir build
-
-cd build 
-
+cd build
 cmake ..
-
 make
+```
