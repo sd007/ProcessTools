@@ -11,6 +11,7 @@ Description: process communication tools,use for  multiprocess exchanging messag
 **************************************************/  
 
 #include <iostream>
+#include <string.h>
 using namespace std;
 #ifdef _WIN32
 #include <Windows.h>
@@ -18,7 +19,8 @@ using namespace std;
 #endif
 
 #ifdef __linux
-#include <stdio.h>  
+#include <stdio.h> 
+#include <stdlib.h> 
 #include <unistd.h>  //getpagesize(  )  
 #include <sys/ipc.h>  
 #include <sys/shm.h>  

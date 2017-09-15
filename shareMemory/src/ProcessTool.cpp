@@ -45,7 +45,8 @@ void* ProcessTool::createChannel( char* chName, int *result, long size /*= 1024*
 		}
 #else
 		//create shared memory 
-		shmid=shmget(key_t)std::atoi( chName.c_str()), sizeof(MsgHead), IPC_CREAT|0666  );  
+                int shmid = -1;
+		shmid=shmget((key_t)atoi(chName), sizeof(MsgHead), IPC_CREAT|0666);  
 		if( shmid == -1 )  
 		{  
 			*result = -1;
@@ -61,7 +62,7 @@ void* ProcessTool::createChannel( char* chName, int *result, long size /*= 1024*
 			return NULL;
 		}
 		//创建信号量  
-		m_semId = semget((key_t)std::atoi( chName.c_str()), 1, 0666 | IPC_CREAT); 
+		m_semId = semget((key_t)atoi(chName), 1, 0666 | IPC_CREAT); 
 		if(!set_semvalue())  
 		{  
 			*result = -3;
@@ -102,7 +103,8 @@ void* ProcessTool::openChannel( char* chName, int *result )
 	}
 #else
 	//create shared memory 
-	shmid=shmget(key_t)std::atoi( chName.c_str()), sizeof(MsgHead), IPC_CREAT|0666  );  
+        int shmid = -1;
+	shmid=shmget((key_t)atoi(chName), sizeof(MsgHead), IPC_CREAT|0666);  
 	if( shmid == -1 )  
 	{  
 		*result = -1;
@@ -118,7 +120,7 @@ void* ProcessTool::openChannel( char* chName, int *result )
 		return NULL;
 	}
 	//创建信号量  
-	m_semId = semget((key_t)std::atoi( chName.c_str()), 1, 0666 | IPC_CREAT); 
+	m_semId = semget((key_t)atoi(chName), 1, 0666 | IPC_CREAT); 
 	if(!set_semvalue())  
 	{  
 		*result = -3;
@@ -193,6 +195,7 @@ int ProcessTool::recvBuf( MsgHead *buffer )
 		}
 #endif
 		memcpy((char*)buffer, m_pSharedMemory, MAX_MSG_LENGTH);
+		memset(m_pSharedMemory, 0, sizeof(MsgHead));
 #ifdef _WIN32
 		ReleaseMutex(m_bufferMutex);  
 #else
